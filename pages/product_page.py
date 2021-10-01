@@ -26,9 +26,9 @@ class ProductPage(BasePage):
     def should_be_see_msg_add_basket(self):
         name_product = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT)
         name_product_in_msg = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT_IN_MSG)
-        assert name_product.text in name_product_in_msg.text
+        assert name_product.text == name_product_in_msg.text, "Wrong name in the message"
     def should_be_price_product_in_basket(self):
         price_product = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT)
         price_product_in_basket = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT_IN_BASKET)
         print(price_product_in_basket)
-        assert price_product.text in price_product_in_basket.text
+        assert price_product.text == price_product_in_basket.text, "Wrong price in cart"
