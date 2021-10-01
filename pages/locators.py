@@ -13,3 +13,5 @@ class ProductPageLocators():
     NAME_PRODUCT = (By.CSS_SELECTOR, ".product_main > h1")
     TEXT_IN_MSG = (By.CSS_SELECTOR, "[contains(text(), ' был добавлен в вашу корзину.')]")
     NAME_PRODUCT_IN_MSG = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div")
+    PRICE_PRODUCT = (By.CSS_SELECTOR, ".product_main > .price_color")
+    PRICE_PRODUCT_IN_BASKET = (By.CSS_SELECTOR, "#messages > div:nth-child(3) > div > p")
